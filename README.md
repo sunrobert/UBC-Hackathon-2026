@@ -16,9 +16,11 @@ The part no one else has: **it calls you.** When a deposit lands in the agent's 
 
 The phone call is the guardrail. Every prior voice-crypto project only takes calls. This one makes them.
 
+And it speaks your language. Any phone, any language, no app. Switch to Spanish mid-call and the agent follows; the rules, limits, and PIN stay the same underneath.
+
 ## The demo
 
-1. Dial the number live. Show auto, ask-first, and blocked, out loud.
+1. Dial the number live. Show auto, ask-first, and blocked, out loud. One of them in a second language.
 2. Hang up. Send testnet USDC from a laptop.
 3. The phone rings on stage. Say yes. The transaction shows up on the Arc explorer.
 
@@ -30,7 +32,7 @@ About four minutes.
 |---|---|
 | **Agentic Payments & AI** (main track) | Judged on the agent's decision loop and safety limits. That is the whole product. |
 | **Best use of Arc** | USDC as gas means "the agent spent 0.40 USDC" is a sentence a judge understands on the phone. Circle wallet SDK if it supports Arc testnet. |
-| **ElevenLabs bounty** | Voice is the entire interface, not an add-on. The demo video has audio by construction. |
+| **ElevenLabs bounty** | Voice is the entire interface, not an add-on. Multilingual on a phone line is their home turf. The demo video has audio by construction. |
 | **QuickNode Streams bounty** | A Stream watching the agent's wallet on Arc is what makes the phone ring. |
 
 ## How it works
