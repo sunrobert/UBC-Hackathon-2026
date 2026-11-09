@@ -106,7 +106,7 @@ Approach B, built as A first, then stretch items strictly in order, with the cut
 
 **Text channel (iMessage), added 2026-11-09**
 
-Positioning: **the call is the approval, the text is the receipt.** Voice stays the primary interface and the only place money over the threshold gets approved. Text is the quiet channel around it. (Reference: a Poke-style agent you message in iMessage, confirmed by Robert 2026-11-09.)
+Positioning: **the call is the approval, the text is the receipt.** Voice stays the primary interface and the only place money over the threshold gets approved. Text is the quiet channel around it. (Reference: agents you message in iMessage like Poke and Instinct, confirmed by Robert 2026-11-09. The bar they set: it feels like texting a person, replies are short, and nothing needs an app.)
 
 - *Receipts (core, Tue 17).* After every executed, blocked, or expired action, the agent texts the owner: one-line summary, action code, explorer link. This also fixes the "spoken tx hash is unintelligible" problem; on the call the agent says "I've texted you the receipt."
 - *Inbound commands (stretch A, Wed 18).* The owner texts "balance" or "send 5 to alice"; the same tools and policy engine run. AUTO actions execute and reply with a receipt. BLOCK replies with the rule.
@@ -249,7 +249,7 @@ Attend the Nov 12 kickoff and the Circle workshop (Nov 16–19).
 6. **Answering-machine detection.** Does the ElevenLabs outbound endpoint expose Twilio AMD? Pre-hack spike; fallback described above.
 7. Name.
 8. **Language switching and coverage.** Unverified: (a) that the ElevenLabs language-detection tool switches English → Mandarin mid-call cleanly over Twilio's narrowband audio, and how long the switch takes; (b) Mandarin digit accuracy on a phone line; (c) that the text-based conversation simulation API exists on the account tier and can assert tool calls, which the 10-language smoke test depends on. If (c) fails, tier 2 becomes a manual spot-check of three languages and the README says so. Add (a) and (c) to the ElevenLabs pre-hack spike; re-test (a) and (b) on Sun 15 with the real number.
-9. **iMessage transport.** Reference confirmed as Poke-style. Transport unknowns: does `imessage-kit` send and receive reliably on Robert's macOS version with a second Apple ID; can a fresh Apple ID message a phone number without being rate-limited or flagged; does ElevenLabs offer a text mode for the same agent.
+9. **iMessage transport.** Reference confirmed as Poke and Instinct style. Transport unknowns: does `imessage-kit` send and receive reliably on Robert's macOS version with a second Apple ID; can a fresh Apple ID message a phone number without being rate-limited or flagged; does ElevenLabs offer a text mode for the same agent.
 
 ## Success Criteria
 
