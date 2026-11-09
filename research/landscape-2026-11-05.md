@@ -48,3 +48,11 @@ Also seen: eva, speaky, ethtalk, say-less, Chain Speak, basetone on ETHGlobal/De
 - **Layer 1 (everyone knows):** voice is a nice input for crypto; "talk to your wallet" demos well.
 - **Layer 2 (what's out there):** a dozen hackathon projects do exactly that. Sponsors keep listing it as an example, so it keeps getting built. Nobody has shipped one people use.
 - **Layer 3 (where they're wrong):** they treat voice as an *input device*. The real advantage of a phone call in agentic finance is that it's an *interrupt*. Phones ring, screens don't. An agent with a budget needs a consent channel that reaches the human anywhere with zero app install. The phone call is the guardrail, not the UI.
+
+## iMessage transport (added 2026-11-09)
+
+Apple has no public iMessage API. Every route is a bridge. Vendor comparison pages are written by competitors; treat prices as approximate.
+
+- **Self-hosted on a Mac:** Photon `imessage-kit` (TypeScript, open source) https://github.com/photon-hq/imessage-kit ; BlueBubbles (REST + webhooks); `imsg` CLI (macOS 14+, Full Disk Access). Mac must stay awake; a personal Apple ID sending volume can be flagged.
+- **Hosted:** LoopMessage (~$20/mo shared for AI assistants per one source), Blooio, Tuco, Sendblue ($100/mo AI Agent tier reported as inbound-only), Linq (sales-gated, ~$250/line + setup per a competitor). https://www.sendblue.com/blog/best-imessage-api-comparison , https://blooio.com/blog/best-imessage-api-2026 , https://zerosettle.io/blog/best-imessage-api-providers/
+- **SMS on Twilio:** unregistered US 10DLC is blocked outright (error 30034), pending registration doesn't count. Sole-proprietor brand: one campaign, one number, 1,000 msg/day; about $4 + $15 + $2/mo; approval from ~2 days to weeks. https://support.twilio.com/hc/en-us/articles/14910496447771-Shutdown-of-Unregistered-10DLC-Messaging

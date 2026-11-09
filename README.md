@@ -18,6 +18,8 @@ The phone call is the guardrail. Every prior voice-crypto project only takes cal
 
 And it speaks your language. Any phone, any language, no app. The agent covers 30+ languages and switches mid-call when you do: start in English, continue in Mandarin, and the rules, limits, and PIN stay the same underneath.
 
+**It's in iMessage too.** The call is the approval; the text is the receipt. Every action sends a receipt with an explorer link. Text it a small command and it just does it. Text it something over your limit and it replies "calling you now," and your phone rings. Approvals never happen by text, and the PIN is never typed into a thread.
+
 ## The demo
 
 1. Dial the number live. Show auto, ask-first, and blocked, out loud. Start in English, switch to Mandarin mid-call.
@@ -49,7 +51,7 @@ Owner phone <── Twilio ──> ElevenLabs Agent ──server tools──> Ba
 
 Solo build, TypeScript end to end, no custom contracts, **no real money**.
 
-Stretch, in order: the agent paying a sub-cent USDC fee for a price quote (x402-style), then a swap or CCTP bridge.
+Stretch, in order: inbound text commands with call escalation, the agent paying a sub-cent USDC fee for a price quote (x402-style), then a swap or CCTP bridge.
 
 ## Repo layout
 
