@@ -16,11 +16,11 @@ The part no one else has: **it calls you.** When a deposit lands in the agent's 
 
 The phone call is the guardrail. Every prior voice-crypto project only takes calls. This one makes them.
 
-And it speaks your language. Any phone, any language, no app. Switch to Mandarin mid-call and the agent follows; the rules, limits, and PIN stay the same underneath.
+And it speaks your language. Any phone, any language, no app. The agent covers 30+ languages and switches mid-call when you do: start in English, continue in Mandarin, and the rules, limits, and PIN stay the same underneath.
 
 ## The demo
 
-1. Dial the number live. Show auto, ask-first, and blocked, out loud. One of them in Mandarin.
+1. Dial the number live. Show auto, ask-first, and blocked, out loud. Start in English, switch to Mandarin mid-call.
 2. Hang up. Send testnet USDC from a laptop.
 3. The phone rings on stage. Say yes. The transaction shows up on the Arc explorer.
 
