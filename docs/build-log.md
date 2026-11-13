@@ -120,3 +120,13 @@ Still to build: a `reset-demo` script to recycle rehearsal funds, since the fauc
 
 **Not yet tested:** an inbound call (owner dials the Telnyx number), a "no" or wrong-PIN path by phone, Mandarin by phone, and a real onchain deposit (rather than simulated) triggering the call.
 
+### Inbound Mandarin call and new voices (Nov 13, midday)
+
+**Inbound call by phone, in Mandarin, worked end to end** (181 s). Robert dialled the Telnyx number from his verified mobile. The agent switched to Mandarin on his first sentence, reported the balance, auto-sent 1 USDC, asked for yes + PIN on 8 USDC and waited through hesitation ("再等一下"), asked for an explicit yes after he gave the PIN first, disambiguated a misheard "6-60" by asking 六 or 六十, blocked 60 (per-transaction cap) and an unknown recipient, and ended the call itself. It never repeated the PIN. On chain: Alice's test wallet holds 9 USDC.
+
+**Voice problem and fix.** The agent used one American English voice (Eric) for every language, which made Mandarin sound like an accent and English sound aggressive to Robert. Now English uses **Katie** (phone-assistant voice Robert found), and the Mandarin language preset uses **Amy**, a native Beijing Mandarin voice, on the `eleven_v4_turbo` model. A language preset can override the speech model, so Mandarin is not stuck on the flash model ElevenLabs forces for English-default agents. Picked by ear from generated samples (about 1,400 credits).
+
+**Prompt:** amounts are rounded when spoken; Mandarin uses 密码, 爱丽丝, 储蓄 and measure words instead of mixed English. Agent behaviour tests re-run after the change: **27/27**. Backend unit tests: 204.
+
+**Small issues seen, not yet addressed:** the agent was interrupted twice mid-sentence when the caller started speaking.
+
