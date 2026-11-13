@@ -183,17 +183,18 @@ Positioning: **the call is the approval, the text is the receipt.** Voice stays 
 
 ### Demo config (`demo.env`, verified in rehearsal to produce CALL, not BLOCK)
 
+**Rescaled Nov 13** to fit the faucet, which gives about 40 USDC per address. The earlier 200/159 numbers are retired.
+
 ```
-PER_TX_CAP=250        DAILY_CAP=1000        APPROVAL_THRESHOLD=50
-GAS_RESERVE_USDC=1    SWEEP_THRESHOLD_USDC=100   SAVINGS_LABEL=savings
+PER_TX_CAP=50         DAILY_CAP=200         APPROVAL_THRESHOLD=5
+GAS_RESERVE_USDC=1    SWEEP_THRESHOLD_USDC=10    SAVINGS_LABEL=savings
 ALLOWLIST=savings:0x...,alice:0x...,quote_api:0x...   (savings and alice are the builder-controlled wallets below)
 ALLOWLIST_ALIASES=savings:储蓄|存款,alice:爱丽丝        OWNER_LANGUAGE=en        OWNER_PIN=<4 digits, no 1 or 4, rotate after demo>
-Agent wallet starts each run at 60 USDC. Sender wallet holds the rest (target 300+ accumulated from the faucet pre-hack).
-Demo deposit: 200 → balance 260 → sweep proposes send(savings, 159) → rule 6 CALL.
-Inbound demo: send(alice, 5) → AUTO; send(alice, 80) → CALL; send(alice, 300) → BLOCK per_tx_cap.
-Inbound order on stage: (English) send(alice, 80) → CALL, yes + PIN → (English) send(alice, 300) → BLOCK → (switch to Mandarin, same call) "再给 Alice 转五个 USDC" → AUTO, read back in Mandarin → "谢谢,再见". Then the outbound climax in English.
+Agent wallet starts each run at 15 USDC. Sender wallet holds 20+ for the deposit.
+Inbound demo: send(alice, 8) -> CALL, yes + PIN; send(alice, 60) -> BLOCK per_tx_cap; (switch to Mandarin) send(alice, 1) -> AUTO.
+Agent left with about 6. Demo deposit: 20 -> about 26 -> sweep proposes send(savings, 15) -> CALL.
 ```
-All three wallets (agent, sender, savings) are builder-controlled; keys in `.env.local`. `scripts/reset-demo.ts` cancels every `pending` action, drains the outbound queue, moves savings → sender, and tops the agent wallet back to 60. Run before every rehearsal. Daily cap of 1000 survives four 159-USDC runs; reset manually if more.
+Sweeps are rounded down to whole USDC so the agent never reads out gas fractions. All three demo wallets (agent, sender, savings) are builder-controlled. A `reset-demo` script that moves alice and savings back and tops the agent to 15 is still to be built; until then, rehearsals drain the wallets, so keep them few. Daily cap of 200 covers several runs.
 
 ### Build order with cut lines (Nov 13 noon → Nov 20 noon)
 
@@ -232,7 +233,7 @@ Attend the Nov 12 kickoff and the Circle workshop (Nov 16–19).
   - QuickNode Streams: confirm Arc testnet `logs` dataset exists and measure delivery lag.
   - ElevenLabs: confirm `system__caller_id` and `system__called_number` arrive in a server-tool call; confirm the conversation-initiation webhook fires for inbound Twilio calls and the post-call webhook fires with a transcript; confirm outbound calls reach your number; check whether answering-machine detection is exposed; confirm the language-detection tool switches English → Mandarin mid-call on a real phone call; confirm the conversation-simulation API is available and returns tool calls.
 - iMessage bridge spike (throwaway): create a second Apple ID for the agent, sign it into Messages on the Mac, and confirm `imessage-kit` can send to and receive from your phone. Check whether ElevenLabs agents have a text mode. Decide this week whether to start Twilio A2P sole-proprietor registration as a green-bubble fallback.
-- Faucet: accumulate 300+ testnet USDC in the sender wallet over the prep week, or scale the demo numbers down proportionally.
+- Faucet: ~~accumulate 300+~~ the faucet gives about 40 USDC per address; demo numbers were scaled down on Nov 13 (see Demo config).
 - Write and rehearse the 5-minute talk track without software.
 - Decide the real name.
 

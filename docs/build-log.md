@@ -100,3 +100,9 @@ Robert approved installing `cloudflared` (Homebrew, free, no account). `npm run 
 
 Telnyx: Robert is partway through the SIP connection on the free tier. FQDN, credentials, inbound, and an outbound voice profile all accepted so far.
 
+### Funds and demo sizing (Nov 13)
+
+Robert funded the demo wallets from Circle's faucet: 40 USDC each to `agent` and `sender`, confirmed on chain. The faucet caps at about 40 per address, so the demo was scaled down about tenfold: 5 USDC auto-approve, 50 per transaction, 200 a day, keep 10 and sweep the rest. Demo amounts are now 1 (auto), 8 (ask), 60 (blocked), and a 20 USDC deposit that sweeps 15. Sweeps are rounded down to whole USDC so the agent never reads out gas fractions. Tests: 200 passing.
+
+Still to build: a `reset-demo` script to recycle rehearsal funds, since the faucet won't cover many runs.
+

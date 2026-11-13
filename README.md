@@ -10,9 +10,9 @@
 
 Hotline is a phone number you call to run an onchain wallet with your voice. It holds USDC on Arc testnet and acts within limits you set.
 
-- **"Send 5 to Alice."** Done, under your auto-approve threshold.
-- **"Send 80 to Alice."** Over the threshold. The agent asks for a spoken yes and your PIN, then sends.
-- **"Send 300."** Blocked. It tells you which rule stopped it.
+- **"Send 1 to Alice."** Done, under your auto-approve threshold.
+- **"Send 8 to Alice."** Over the threshold. The agent asks for a spoken yes and your PIN, then sends.
+- **"Send 60."** Blocked. It tells you which rule stopped it.
 
 The part no one else has: **it calls you.** When a deposit lands in the agent's wallet and your standing rule says act (keep 100 on hand, sweep the rest to savings), your phone rings. The agent explains what arrived, proposes the move, and waits for a spoken yes plus PIN before touching anything.
 
