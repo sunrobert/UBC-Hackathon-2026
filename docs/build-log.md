@@ -130,3 +130,9 @@ Still to build: a `reset-demo` script to recycle rehearsal funds, since the fauc
 
 **Small issues seen, not yet addressed:** the agent was interrupted twice mid-sentence when the caller started speaking.
 
+### Rehearsal reset (Nov 13, afternoon)
+
+`npm run reset-demo` returns rehearsal money from the savings and alice wallets to the sender and tops the agent to 15 USDC plus 5 cents for gas, so the sweep read out on stage is the same every run. Planned by a pure, unit-tested function (212 tests total). The agent is paused during the moves because a top-up is itself a deposit and would otherwise trigger the sweep and ring the phone.
+
+**Run live:** savings to sender 28.99, alice to sender 8.99, sender to agent 13.06. The server logged the top-up as `observed (sweep_blocked)` and placed no call. After: agent 15.06, sender 64.92.
+
