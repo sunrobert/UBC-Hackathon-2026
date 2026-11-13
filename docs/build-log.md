@@ -87,3 +87,16 @@ Robert supplied an ElevenLabs API key (Creator plan). Built and created the agen
 **Not verified:** no real call has been placed and no real deposit has been detected. Both need Robert's inputs below.
 
 **Waiting on Robert now:** the three Twilio values and his mobile number in `.env.local`, faucet funding for the sender and agent wallets, and a yes to install a free tunnel so ElevenLabs can reach the backend on his laptop.
+
+### Tunnel (Nov 13, late morning)
+
+Robert approved installing `cloudflared` (Homebrew, free, no account). `npm run tunnel` opens a Cloudflare quick tunnel to the laptop, writes `PUBLIC_URL`, and re-runs `npm run agent` so the ElevenLabs tools and the call-start hook point at it.
+
+**Verified from the public internet** (with a placeholder owner number, since Robert's is not set yet): `/health` 200; a tool call without the secret 401; as the owner 200; as a stranger 403; `/api/state` without the token 401; `/dashboard` 200. The ElevenLabs tools were confirmed pointing at the tunnel.
+
+**Gotcha:** the first version polled the new hostname immediately, macOS cached "no such host," and every retry failed for minutes. The script now waits 15 seconds and checks through Cloudflare's resolver.
+
+**Caveat:** the address changes every time the tunnel restarts, and when it is down the agent's tools fail. Run `npm start` and `npm run tunnel` side by side whenever the agent is in use.
+
+Telnyx: Robert is partway through the SIP connection on the free tier. FQDN, credentials, inbound, and an outbound voice profile all accepted so far.
+
