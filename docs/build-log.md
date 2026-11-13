@@ -71,6 +71,8 @@ Robert supplied an ElevenLabs API key (Creator plan). Built and created the agen
 - **Scripts.** `npm run phone` imports the Twilio number and assigns the agent; `npm run demo:deposit -- 200` sends testnet USDC from the sender wallet, which is the on-stage trigger.
 - Backend unit tests: 162 passing. The server boots with the poller running against Arc testnet.
 
+**Twilio's free trial cannot carry the voice agent.** Robert noticed the trial number is shared. Twilio's trial docs go further: `<Stream>` and `<Dial><Sip>` are blocked on trial accounts, and those are the only ways to connect a call to ElevenLabs. `npm run phone` (native import) will not work on this account. The call queue, dialer interface, and deposit watcher are unaffected: the queue talks to a `Dialer` interface, so a different way of placing the call slots in behind it. Options are in the design doc's constraints section.
+
 **Not verified:** no real call has been placed and no real deposit has been detected. Both need Robert's inputs below.
 
 **Waiting on Robert now:** the three Twilio values and his mobile number in `.env.local`, faucet funding for the sender and agent wallets, and a yes to install a free tunnel so ElevenLabs can reach the backend on his laptop.
