@@ -2,7 +2,7 @@
 
 **UBC 2026 Hackathon HQ** · Agentic Payments & AI track · Arc testnet · Nov 13–20, 2026 · Finals Nov 21, UT Austin
 
-> Status: **planning**. Hacking starts Fri Nov 13 at 12:00 PM CST. Per the rules, no project code exists in this repo before then. The build repo will be linked here on day one.
+> Status: **building**. Hacking opened at the kickoff call, Thu Nov 12 at 6:00 PM CST. Everything in this repo before that is planning only: rules, research, and the design doc. No project code predates the start. The build repo will be linked here.
 
 ## The idea
 
@@ -62,14 +62,14 @@ Stretch, in order: inbound text commands with call escalation, the agent paying 
 | [`docs/hackathon-guide-full.md`](docs/hackathon-guide-full.md) | The organizers' full guide |
 | [`research/`](research/) | What's live on Arc, ElevenLabs telephony APIs, Circle testnet limits, prior voice-crypto projects |
 | `demos/` | Demo script, video storyboard, pitch (coming) |
-| `project/` | Empty until Nov 13 by rule. Build repo linked here on day one. |
+| `docs/kickoff-notes.md` | What changed at the Nov 12 kickoff call |
+| Build repo | Separate repository, created after the start. Linked here once public. |
 
 ## Timeline (CST)
 
 | When | What |
 |---|---|
-| Nov 12, 6 PM | Kickoff call |
-| Nov 13, 12 PM | Hacking starts |
+| Nov 12, 6 PM | Kickoff call, hacking starts |
 | Nov 16–19 | Sponsor workshops and office hours |
 | Nov 19 night | Target submission (deadline is Nov 20, 12 PM) |
 | Nov 21 | Finals at UT Austin |
@@ -78,7 +78,7 @@ Stretch, in order: inbound text commands with call escalation, the agent paying 
 
 - Hackathon: https://www.universityblockchain.org/programs/hackathon
 - Devpost: https://ubc-hackathon-2026.devpost.com
-- Telegram: https://t.me/+Q0hy2P7nbIk2YWIx
+- Telegram: https://t.me/+NfVyaGKfiF5hY2Nh
 
 ## Team
 

@@ -28,7 +28,7 @@ Target: UBC 2026 Hackathon, Agentic Payments & AI track, Best use of Arc, Eleven
 
 - **No real money.** Arc testnet only, faucet USDC. Hard constraint from Robert.
 - Solo builder, TypeScript, no custom Solidity. Compose existing contracts only.
-- Hacking window: Fri Nov 13 12:00 PM CST to Fri Nov 20 12:00 PM CST. No project code before kickoff. Throwaway spike scripts that verify a vendor API and are not committed to the build repo are allowed; accounts, keys, docs, and this design are allowed.
+- Hacking window: **Thu Nov 12 6:00 PM CST** (moved up at the kickoff call; Devpost's Friday-noon start is to be ignored) to Fri Nov 20 12:00 PM CST. Build started Fri Nov 13 morning; the day labels in the build order below still hold. No project code before kickoff. Throwaway spike scripts that verify a vendor API and are not committed to the build repo are allowed; accounts, keys, docs, and this design are allowed.
 - Must be in Austin Nov 21 for closing ceremony to collect any prize.
 - Circle spending policies **do not enforce on testnet**. Guardrails live in our backend. README says so.
 - Submission requirements are the canonical README checklist below.

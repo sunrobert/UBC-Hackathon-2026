@@ -4,14 +4,14 @@ Condensed from the official guide ([full copy](hackathon-guide-full.md)) and
 https://www.universityblockchain.org/programs/hackathon. Captured 2026-11-05.
 
 Submit on Devpost: https://ubc-hackathon-2026.devpost.com
-Telegram: https://t.me/+Q0hy2P7nbIk2YWIx
+Telegram: https://t.me/+NfVyaGKfiF5hY2Nh (link from the kickoff deck)
+Kickoff changes: [kickoff-notes.md](kickoff-notes.md)
 
 ## Timeline (all CST)
 
 | When | What |
 |---|---|
-| Thu Nov 12, 6:00 PM | Kickoff call: tracks + sponsor Q&A |
-| Fri Nov 13, 12:00 PM | Hacking starts (build from anywhere) |
+| Thu Nov 12, 6:00 PM | Kickoff call **and hacking starts** (confirmed at kickoff; ignore Devpost's Friday-noon start) |
 | Mon–Thu Nov 16–19 | Solana + Circle workshops, nightly sponsor office hours |
 | Fri Nov 20, 12:00 PM | **Submission deadline on Devpost** |
 | Fri Nov 20, 11:59 PM | Finalists notified |
@@ -91,7 +91,7 @@ Track Winner chosen by UBC team. Solana award by Solana rep. Arc award by Arc re
 ## Rules
 
 - Teams of 1–4 recommended; solo fine.
-- **No pre-existing projects.** Must be substantially built during Nov 13–20. (Brainstorming, design docs, and research before Nov 13 are fine. Code is not.)
+- **No pre-existing projects.** Must be built during the hackathon: Nov 12, 6 PM CST to Nov 20, 12 PM CST. (Brainstorming, design docs, and research before that are fine. Code is not.)
 - AI tools encouraged. Still has to be a working, substantive build.
 - You keep all IP.
 - Judges' decisions are final.
