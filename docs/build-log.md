@@ -59,4 +59,6 @@ Robert supplied an ElevenLabs API key (Creator plan). Built and created the agen
 
 **Not done:** the agent's tools point at a placeholder URL. Nothing can call it by phone until the backend is deployed and a phone number is attached.
 
-**Waiting on Robert now:** a host for the backend, a Twilio account with one number, faucet funding, and the owner phone number.
+**New constraint, Nov 13 evening: no spending at all.** Paid Twilio and paid hosting are out. Options on the table: Twilio's free trial or browser-only calling for voice; the laptop behind a free tunnel for hosting.
+
+**Waiting on Robert now:** the phone decision (Twilio free trial or browser only), faucet funding, and the owner phone number.
