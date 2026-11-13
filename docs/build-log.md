@@ -61,4 +61,16 @@ Robert supplied an ElevenLabs API key (Creator plan). Built and created the agen
 
 **New constraint, Nov 13 evening: no spending at all.** Paid Twilio and paid hosting are out. Options on the table: Twilio's free trial or browser-only calling for voice; the laptop behind a free tunnel for hosting.
 
-**Waiting on Robert now:** the phone decision (Twilio free trial or browser only), faucet funding, and the owner phone number.
+**Phone decision: Twilio's free Limited trial** (no card, 30 days, a temporary trial number, verified numbers only). Browser calling stays the fallback if ElevenLabs cannot import a temporary trial number, which is untested.
+
+### Evening: the path from deposit to phone call
+
+- **Deposit watcher.** Decodes Arc's system-emitter Transfer logs into deposits; ignores the ERC-20 emitter, transfers to others, dust, and pending logs. Runs as an RPC poller, the fallback trigger from the design, so the ring does not depend on QuickNode.
+- **Call queue.** One call at a time, two attempts ninety seconds apart, then `expired_no_answer`. The amount is recomputed at dial time and then frozen: binding the call never changes it.
+- **Dialer.** Places calls through ElevenLabs' Twilio outbound endpoint and polls the conversation status to learn when a call ends. Polling replaces the post-call webhook from the design: one less secret and one less thing to configure.
+- **Scripts.** `npm run phone` imports the Twilio number and assigns the agent; `npm run demo:deposit -- 200` sends testnet USDC from the sender wallet, which is the on-stage trigger.
+- Backend unit tests: 162 passing. The server boots with the poller running against Arc testnet.
+
+**Not verified:** no real call has been placed and no real deposit has been detected. Both need Robert's inputs below.
+
+**Waiting on Robert now:** the three Twilio values and his mobile number in `.env.local`, faucet funding for the sender and agent wallets, and a yes to install a free tunnel so ElevenLabs can reach the backend on his laptop.

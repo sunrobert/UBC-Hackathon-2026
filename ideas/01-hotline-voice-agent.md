@@ -28,7 +28,7 @@ Target: UBC 2026 Hackathon, Agentic Payments & AI track, Best use of Arc, Eleven
 
 - **No real money.** Arc testnet only, faucet USDC. Hard constraint from Robert.
 - **No spending at all.** Added Nov 13: Robert will not pay for any service. Every dependency must be on a free tier or free trial with no charge. This rules out a paid Twilio upgrade, paid hosting, and paid iMessage providers. Consequences:
-  - *Phone:* Twilio's free trial (no card, 30 days, about 75 voice minutes, one number, calls only to verified numbers, a trial announcement on calls) or no phone number at all, with the owner talking to the agent in the browser through ElevenLabs' web SDK. Decision pending.
+  - *Phone:* Twilio's free trial (no card, 30 days, about 75 voice minutes, one number, calls only to verified numbers, a trial announcement on calls) or no phone number at all, with the owner talking to the agent in the browser through ElevenLabs' web SDK. **Decided Nov 13: Twilio's free Limited trial**, with browser calling as the fallback if the temporary trial number cannot be imported into ElevenLabs.
   - *Hosting:* the backend runs on Robert's laptop behind a free tunnel during the build and the demo, or on a host's free trial credit if one needs no card. "Working demo or deployed app" in the submission rules is met by the demo video and repo.
   - *iMessage:* only the free Mac-side bridge. Hosted providers and Twilio SMS registration are out.
   - *ElevenLabs:* the hackathon Creator credits are the whole budget (131,000; behaviour tests cost about 100 each).
