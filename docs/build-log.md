@@ -106,3 +106,17 @@ Robert funded the demo wallets from Circle's faucet: 40 USDC each to `agent` and
 
 Still to build: a `reset-demo` script to recycle rehearsal funds, since the faucet won't cover many runs.
 
+### First real phone call (Nov 13, about 11:30 AM CST)
+
+**The outbound approval call works end to end on free accounts.**
+
+- Robert verified his mobile in Telnyx and filled the Telnyx values in `.env.local`. `npm run phone` imported the Telnyx number (+1 807 695 9853, a Canadian area code; kept, since the trial allows one number per lifetime) into ElevenLabs as a SIP trunk number assigned to the agent.
+- Server and tunnel started; the tunnel repointed the agent's tools and call-start hook.
+- A simulated deposit via the dashboard API triggered the sweep rule: 40 USDC on hand, keep 10 plus 1 for gas, propose 29 to savings. Policy said CALL (`stream_source`).
+- The call queue placed the call through ElevenLabs' SIP outbound endpoint and Telnyx. Robert's phone rang, he approved by voice with his PIN, the agent called `confirm_action`, and the backend sent 29 USDC to the savings wallet.
+- **Verified on Arc testnet:** tx `0xfa621075f960fa9eee9c8610dc9ab48a695f88e8748eac247a5075048d286060`, status success, agent to savings, 29 USDC, fee about 0.0005 USDC. Balances after: agent 10.9995, savings 29, sender 40.
+
+**Bug found and fixed on the way:** `npm run phone` appended to `.env.local` without checking for a trailing newline, which glued the new phone-number-id line onto the end of the SIP password line. The import itself used the correct password. Repaired the file; both scripts now write through `setEnvValue`, which is unit-tested for the no-trailing-newline case.
+
+**Not yet tested:** an inbound call (owner dials the Telnyx number), a "no" or wrong-PIN path by phone, Mandarin by phone, and a real onchain deposit (rather than simulated) triggering the call.
+
