@@ -2,7 +2,9 @@
 
 **UBC 2026 Hackathon HQ** · Agentic Payments & AI track · Arc testnet · Nov 13–20, 2026 · Finals Nov 21, UT Austin
 
-> Status: **building**. Hacking opened at the kickoff call, Thu Nov 12 at 6:00 PM CST. Everything in this repo before that is planning only: rules, research, and the design doc. No project code predates the start. The build repo will be linked here.
+> Status: **building**. Hacking opened at the kickoff call, Thu Nov 12 at 6:00 PM CST. Everything in this repo before that is planning only: rules, research, and the design doc. No project code predates the start.
+>
+> **Code: [github.com/sunrobert/hotline](https://github.com/sunrobert/hotline)**
 
 ## The idea
 
@@ -63,7 +65,8 @@ Stretch, in order: inbound text commands with call escalation, the agent paying 
 | [`research/`](research/) | What's live on Arc, ElevenLabs telephony APIs, Circle testnet limits, prior voice-crypto projects |
 | `demos/` | Demo script, video storyboard, pitch (coming) |
 | `docs/kickoff-notes.md` | What changed at the Nov 12 kickoff call |
-| Build repo | Separate repository, created after the start. Linked here once public. |
+| [`docs/build-log.md`](docs/build-log.md) | Day-by-day progress |
+| Build repo | [sunrobert/hotline](https://github.com/sunrobert/hotline): the code, created after the start |
 
 ## Timeline (CST)
 

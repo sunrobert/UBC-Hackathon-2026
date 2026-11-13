@@ -1,6 +1,6 @@
 # Build log
 
-Hacking window: Thu Nov 12, 6:00 PM CST to Fri Nov 20, 12:00 PM CST. Build repo: `hotline/` (separate git repository).
+Hacking window: Thu Nov 12, 6:00 PM CST to Fri Nov 20, 12:00 PM CST. Build repo: [sunrobert/hotline](https://github.com/sunrobert/hotline), checked out locally at `hotline/`.
 
 ## Fri Nov 13 (day 1)
 
@@ -34,4 +34,6 @@ This is Friday's list plus all of Saturday's, minus the dashboard.
 
 **Next, in order:** dashboard (read-only ledger view, unpause), then the ElevenLabs agent with a Twilio number and the tools wired up (Sunday's list), then the deposit trigger and outbound call (Monday's list).
 
-**Waiting on Robert:** faucet funding, owner phone number in `.env.local`, ElevenLabs / Twilio / QuickNode / Circle account status, whether to publish the build repo.
+**Waiting on Robert:** faucet funding, owner phone number in `.env.local`, ElevenLabs / Twilio / QuickNode / Circle account status.
+
+**Published:** the build repo went public on GitHub the same afternoon.
