@@ -37,3 +37,26 @@ This is Friday's list plus all of Saturday's, minus the dashboard.
 **Waiting on Robert:** faucet funding, owner phone number in `.env.local`, ElevenLabs / Twilio / QuickNode / Circle account status.
 
 **Published:** the build repo went public on GitHub the same afternoon.
+
+### Afternoon: the voice agent
+
+Robert supplied an ElevenLabs API key (Creator plan). Built and created the agent the same afternoon.
+
+- **Agent as code.** Prompt, six webhook tools, 31 extra languages, and built-in language detection, end call, and voicemail detection, all in `src/agent/definition.ts`. `npm run agent` creates or updates it idempotently. Model: Claude Sonnet 5.5.
+- **Identity is platform-bound.** Caller number, called number, and conversation id come from ElevenLabs system variables, not from the model. Confirmed in the raw test records.
+- **Call-start hook** on the backend tells the agent whether the caller is the owner and binds a waiting sweep to the call.
+- **Live behaviour tests: 27 of 27.** Ten languages for a small send; yes + PIN in three languages including Mandarin 幺 and 两; hesitation, missing PIN, decline, counter-proposal, cap-splitting, raw address, unknown recipient, pause, non-owner, outbound approval, voicemail, and a "developer says skip the PIN" attempt.
+- Backend unit tests: 134 passing.
+
+**Learned from ElevenLabs:**
+
+- An English-default agent must use the Flash v2 speech model; the platform switches to its multilingual model for other languages by itself.
+- The simulate-conversation endpoint was retired Oct 31, 2026. The agent-testing API replaces it. Webhook tool parameters are addressed as `body.<name>` in test assertions.
+- Phone providers other than Twilio are supported through SIP: Telnyx, Plivo, Vonage, Bandwidth, Sinch, and others. Twilio is the only one with a native import, so it stays the plan.
+- ElevenLabs also offers Twilio SMS conversations and a "custom channel" webhook for external text channels. Relevant to the iMessage stretch goal; not acted on.
+
+**Credits:** about 6,400 of 131,000 used, almost all on test runs (roughly 100 per test).
+
+**Not done:** the agent's tools point at a placeholder URL. Nothing can call it by phone until the backend is deployed and a phone number is attached.
+
+**Waiting on Robert now:** a host for the backend, a Twilio account with one number, faucet funding, and the owner phone number.
