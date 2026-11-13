@@ -136,3 +136,9 @@ Still to build: a `reset-demo` script to recycle rehearsal funds, since the fauc
 
 **Run live:** savings to sender 28.99, alice to sender 8.99, sender to agent 13.06. The server logged the top-up as `observed (sweep_blocked)` and placed no call. After: agent 15.06, sender 64.92.
 
+### Dashboard sounds (Nov 13, afternoon)
+
+Robert asked for confirmation sounds and a Hotline Bling intro. The song itself is copyrighted, so instead: original sounds generated with ElevenLabs sound effects, picked by ear from 11 samples. **Intro:** a 2.5 s late-night R&B synth sting with a soft phone ring. **Confirm:** a clean two-tone chime (Japanese-style chimes were also tried). **Blocked:** a soft low tone.
+
+ElevenLabs phone agents can only play built-in preset sounds, so custom sounds play on the dashboard, which is on the projector during the demo. The decision of which sound to play is a pure function over two ledger refreshes, served to the page and unit-tested (224 tests). Verified in the browser: module loads, files decode, toggle persists, no console errors. Not verified while signed in, because reading the dashboard token was blocked for the session; Robert should check it once.
+
