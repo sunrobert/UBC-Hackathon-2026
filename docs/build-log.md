@@ -73,6 +73,17 @@ Robert supplied an ElevenLabs API key (Creator plan). Built and created the agen
 
 **Twilio's free trial cannot carry the voice agent.** Robert noticed the trial number is shared. Twilio's trial docs go further: `<Stream>` and `<Dial><Sip>` are blocked on trial accounts, and those are the only ways to connect a call to ElevenLabs. `npm run phone` (native import) will not work on this account. The call queue, dialer interface, and deposit watcher are unaffected: the queue talks to a `Dialer` interface, so a different way of placing the call slots in behind it. Options are in the design doc's constraints section.
 
+### Evening: dashboard and browser calling
+
+- **Dashboard** at `/dashboard`: balance, limits, recipients, pending approvals, ledger with explorer links, unpause, and a development-only simulated deposit. One static page, no build step, no secrets in the source; the token goes in a header.
+- **Browser calling.** "Call Hotline" starts a voice session with the agent from the page, with no phone number. The server issues a short-lived ElevenLabs conversation token. Because a browser session has no caller number, the page binds its conversation id with the dashboard token, and only that conversation's tool calls pass the owner gate.
+- A waiting sweep is described to the agent at its recomputed amount when the call starts and bound at that same amount when the call connects, so the number heard is the number approved.
+- Backend unit tests: 193 passing.
+
+**Verified by running it:** the page renders in light, dark, and phone width; the sign-in gate rejects a wrong token; live state loads from Arc testnet; a simulated deposit appears in the ledger; the pinned ElevenLabs client loads from the CDN; and `/api/call/start` returned a real conversation token from ElevenLabs.
+
+**Not verified:** an actual voice session (needs a microphone), and any tool call during one (needs the backend reachable from the internet, which needs a tunnel Robert has not approved yet).
+
 **Not verified:** no real call has been placed and no real deposit has been detected. Both need Robert's inputs below.
 
 **Waiting on Robert now:** the three Twilio values and his mobile number in `.env.local`, faucet funding for the sender and agent wallets, and a yes to install a free tunnel so ElevenLabs can reach the backend on his laptop.
