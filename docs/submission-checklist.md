@@ -46,8 +46,8 @@ Legend: ✅ done · 🟡 partly done · ❌ not started · ➖ not entering
 | Document the agent's decision loop | ✅ | README "The decision loop". |
 | Document the safety limits | ✅ | README "Safety limits" and "Known limitations". |
 | Objective: spending controls and guardrails | ✅ | Caps, allowlist, gas reserve, approval threshold, spoken PIN, outbound approval calls. The core of the project. |
-| Objective: agents paying per request (x402) | ❌ | Stretch goal, not started. |
-| Recommended tools: x402, Circle Agent Wallets or Nanopayments, Solana Agent Kit | ❌ | None used. The wallet is a viem key held by the backend. |
+| Objective: agents paying per request (x402) | ✅ | `get_price`: the agent buys a spot price for 0.01 USDC per lookup over x402 v2 (exact scheme, EIP-3009 on Arc USDC), approved by the policy engine, settled on Arc in 1.3–2 s. First payment tx `0xaf44…6c51`. README "x402". |
+| Recommended tools: x402, Circle Agent Wallets or Nanopayments, Solana Agent Kit | 🟡 | x402 used, following the v2 spec. Circle Wallets not yet (plan in `docs/circle-plan.md`); the wallet is a viem key held by the backend. |
 
 ## Best use of Arc
 

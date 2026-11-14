@@ -8,6 +8,7 @@ The video is what gets Hotline into finals. Judges screen submissions from Devpo
 | ElevenLabs | The voice working **with audio**, the switch to Mandarin, the outbound call |
 | QuickNode | The deposit appearing on the dashboard labelled **via QuickNode Stream** |
 | Arc / Circle | The transaction on the Arc testnet explorer |
+| Track (objective 1) | The agent paying per request over x402: the price lookup and its ledger row |
 
 ## Shots
 
@@ -30,13 +31,14 @@ Do the inbound call **before** the deposit. With the agent reset to 15 USDC: sen
 | 0:10 | B | Dial the agent. It answers in Katie's voice: "Hotline here. What do you need?" |
 | 0:15 | B + A | **You:** "Send 8 USDC to Alice." **Agent** reads back the amount and recipient, says it's over the 5 USDC auto-approve limit, asks for yes or no and the PIN. **You:** "Yes. PIN [PIN]." **Agent:** "Approved. Sending now." Dashboard: row turns to sent, chime plays. |
 | 0:45 | B + A | **You:** "Send 60 to Alice." **Agent:** refuses, names the 50 USDC per-transaction cap, says nothing was sent. Dashboard: blocked row, soft tone. |
-| 0:55 | B | **You, in Mandarin:** "再给爱丽丝转一个 USDC。" **Agent switches to Amy's Mandarin voice** and confirms the send. **You:** "谢谢,再见。" Agent hangs up. |
-| 1:10 | A | **Narration:** "Every decision names its rule: auto, ask first, or blocked. Those limits live in code and are re-checked at approval time." Pan the ledger. |
-| 1:20 | C | **Narration:** "Now money arrives on its own." Run `npm run demo:deposit -- 20`. |
-| 1:25 | A | The deposit row appears with **via QuickNode Stream**; the intro sting plays. **Narration:** "A QuickNode Stream sees the deposit in under a second. My standing rule says keep 10, sweep the rest." |
-| 1:35 | B | Phone rings. **Agent:** "This is Hotline. Money just arrived in your wallet, and your rule moves the extra to savings. I'd send 15 U S D C to savings. Yes or no, and your PIN?" **You:** "Yes. [PIN]." **Agent:** confirms. |
-| 2:05 | D | Explorer: the 15 USDC transfer, agent wallet to savings, success. **Narration:** "Real USDC on Arc testnet. Nothing moved until I said yes." |
-| 2:15 | A | **Narration:** "Any phone, any language, no app. An AI agent with a budget, and a human veto. That's Hotline." End card: name, repo URL, track and sponsors. |
+| 0:55 | B + A | **You:** "What's Ethereum at?" **Agent:** gives the price and says the lookup cost one cent, paid on Arc. Dashboard: an **x402 payment** row appears. |
+| 1:03 | B | **You, in Mandarin:** "再给爱丽丝转一个 USDC。" **Agent switches to Amy's Mandarin voice** and confirms the send. **You:** "谢谢,再见。" Agent hangs up. |
+| 1:18 | A | **Narration:** "Every decision names its rule: auto, ask first, or blocked. Those limits live in code and are re-checked at approval time." Pan the ledger. |
+| 1:28 | C | **Narration:** "Now money arrives on its own." Run `npm run demo:deposit -- 20`. |
+| 1:33 | A | The deposit row appears with **via QuickNode Stream**; the intro sting plays. **Narration:** "A QuickNode Stream sees the deposit in under a second. My standing rule says keep 10, sweep the rest." |
+| 1:43 | B | Phone rings. **Agent:** "This is Hotline. Money just arrived in your wallet, and your rule moves the extra to savings. I'd send 15 U S D C to savings. Yes or no, and your PIN?" **You:** "Yes. [PIN]." **Agent:** confirms. |
+| 2:13 | D | Explorer: the 15 USDC transfer, agent wallet to savings, success. **Narration:** "Real USDC on Arc testnet. Nothing moved until I said yes." |
+| 2:23 | A | **Narration:** "Any phone, any language, no app. An AI agent with a budget, and a human veto. That's Hotline." End card: name, repo URL, track and sponsors. |
 
 ## Before recording
 

@@ -48,7 +48,13 @@ Two tiers, and we keep them separate. Verified on a real phone call: English and
 The hackathon allows it, and we wanted zero real money at risk. Arc mainnet has been live since September, and the code is the same apart from the network setting and the custody upgrade in question 4.
 
 **14. What isn't built yet?**
-Circle Agent Wallets, pay-per-request tools (x402), the iMessage channel, and stronger identity than caller ID plus PIN.
+Circle Agent Wallets, the iMessage channel, and stronger identity than caller ID plus PIN.
+
+**14b. Is the x402 real if you run the seller yourself?**
+The payment is real and standard; the seller is ours. The agent follows the x402 v2 spec: it gets a 402 with the terms, signs an EIP-3009 authorization for exactly one cent, and sends it in the `PAYMENT-SIGNATURE` header. The seller verifies it and settles it on Arc with `transferWithAuthorization`; the tx is on the explorer. No public x402 facilitator supports Arc testnet yet, so our seller settles its own payments. The buyer code would pay any x402 seller that offers exact USDC on Arc, and it only pays sellers on the allowlist.
+
+**14c. Can x402 be abused to drain the wallet?**
+Every payment goes through the same policy as a spoken send: the seller must be on the allowlist by address, it counts toward the daily cap, and pause stops it. The signature moves only the exact price, only to that seller, and expires in a minute. We tried replaying a settled payment, changing the amount after signing, and sending an expired one; the seller refused all three, and the USDC contract refuses a reused authorization even if the seller forgets.
 
 ## Sponsor judges
 
@@ -59,7 +65,7 @@ USDC as gas means the agent manages one asset and the fees are predictable, whic
 Correct, and it's the first thing we'd add. Agent Wallets fix custody and add a second, onchain-enforced set of limits. CCTP would let deposits arrive from other chains and still ring the phone.
 
 **17. ElevenLabs: what did you use?**
-Agents with six webhook tools, inbound and outbound calls over a SIP trunk, the call-start webhook, language detection, voicemail detection, end call, the agent testing API for 27 behaviour tests, two voices (Katie, and Amy on v4 turbo for Mandarin), sound effects for the dashboard, and the browser SDK. Voice isn't a feature here; it's the interface and the guardrail.
+Agents with seven webhook tools, inbound and outbound calls over a SIP trunk, the call-start webhook, language detection, voicemail detection, end call, the agent testing API for 29 behaviour tests, two voices (Katie, and Amy on v4 turbo for Mandarin), sound effects for the dashboard, and the browser SDK. Voice isn't a feature here; it's the interface and the guardrail.
 
 **18. ElevenLabs: why a separate Mandarin voice?**
 One voice reading every language sounded like an accent. A language preset can override both the voice and the model, so Mandarin uses a native speaker on a better model while English stays on the fast model the platform requires.

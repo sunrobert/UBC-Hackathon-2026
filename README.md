@@ -53,7 +53,7 @@ Owner phone <── Twilio ──> ElevenLabs Agent ──server tools──> Ba
 
 Solo build, TypeScript end to end, no custom contracts, **no real money**.
 
-Stretch, in order: inbound text commands with call escalation, the agent paying a sub-cent USDC fee for a price quote (x402-style), then a swap or CCTP bridge.
+Built beyond the core: the agent pays for price data per request over x402 (one cent of USDC, EIP-3009, settled on Arc). Stretch, in order: inbound text commands with call escalation, then a swap or CCTP bridge.
 
 ## Repo layout
 

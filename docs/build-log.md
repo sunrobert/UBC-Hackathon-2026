@@ -164,3 +164,17 @@ Built test-first (251 tests): a filter that runs on QuickNode and turns Arc logs
 - **Circle plan** in `docs/circle-plan.md`: developer-controlled wallets on `ARC-TESTNET` (Circle's own quickstart uses that chain). Needs Robert's free Circle account and a testnet API key.
 - Tests: 258 passing.
 
+
+### x402 pay-per-request (Nov 14, while Robert was out)
+
+The track's first objective, "agents paying per request (x402)", was the biggest gap. Built it for real rather than as a lookalike.
+
+- **Checked first:** Arc's USDC at `0x3600…0000` supports EIP-3009. `DOMAIN_SEPARATOR` and `authorizationState` answer; the EIP-712 domain is name `USDC`, version `2`. So the x402 `exact` scheme's gasless EIP-3009 path works on Arc.
+- **Followed the spec:** x402 v2 from the x402-foundation repo: `exact` on EVM with `assetTransferMethod: eip3009`; headers `PAYMENT-REQUIRED`, `PAYMENT-SIGNATURE`, `PAYMENT-RESPONSE`, all base64 JSON; the spec's error codes.
+- **What got built (test-first, 315 tests):** offline verification (`src/x402/protocol.ts`), a buyer that signs only after the policy engine approves (`buyer.ts`), Hono paywall middleware that settles only after the data is ready (`seller.ts`), and an Arc facilitator that checks balance, nonce, and a dry run before broadcasting `transferWithAuthorization` (`arc-facilitator.ts`). The engine records each payment as a `pay_api` row that counts toward the daily cap. The new agent tool `get_price` buys a spot price for 0.01 USDC.
+- **Honest framing:** no public x402 facilitator serves Arc testnet, so the price feed runs in our backend with its own key (`0xeeF0…40aF`) and settles its own payments. The buyer would pay any x402 v2 seller offering exact USDC on Arc.
+- **Verified live on Arc testnet:** first payment tx `0xaf44ac5c…6c51`. Decoded: the seller's key called `transferWithAuthorization`; exactly 0.01 USDC moved from the agent to the seller; the agent paid no gas. Replay of a settled signature, a tampered amount, and an expired authorization were all refused with the spec's error codes. A fresh facilitator with no memory still refused the settled authorization by reading the nonce from the USDC contract.
+- **Speed fix:** the first paid lookup took 8.9 s. viem's Arc chain entry has no `blockTime`, so it polled receipts every 4 s. Polling every 250 ms brought it to 1.3–2.0 s, short enough for a spoken reply. This also speeds up how fast ordinary sends show as complete.
+- **Agent:** `get_price` pushed to ElevenLabs; agent tests 29/29 (two new: a price question in English and in Mandarin calls `get_price` with ETH). Cost 2,981 credits; about 115k left.
+- **Also:** `npm run x402 -- setup | buy`, a preflight check for the seller's gas, and the dashboard names x402 rows. Docs updated: code README, checklist, Devpost draft, Q&A (two new answers on x402), pitch, and video script (a 10-second price-lookup beat).
+- **Spent (testnet only):** 0.5 USDC from sender to the seller for gas; five 0.01 lookups (three from the agent, two from the sender in attack tests).
