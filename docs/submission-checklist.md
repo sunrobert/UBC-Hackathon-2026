@@ -23,19 +23,19 @@ Legend: ✅ done · 🟡 partly done · ❌ not started · ➖ not entering
 | Built during the hackathon (from Thu Nov 12, 6 PM CST) | ✅ | Build repo `sunrobert/hotline` starts Nov 13. HQ repo holds only planning before that. |
 | Exactly one main track; at most one chain award | ✅ | Agentic Payments & AI; Arc. |
 | **Present in person at the closing ceremony, Sat Nov 21, UT Austin** | ❌ | Required to win anything, including bounties. Robert must be there. |
-| Finalists: 5 min pitch + Q&A (deck says 2 or 5 min of Q&A) | ❌ | Prepare for 5 min of Q&A. |
+| Finalists: 5 min pitch + Q&A (deck says 2 or 5 min of Q&A) | 🟡 | Pitch in `demos/pitch.md`, Q&A answers in `demos/qa-prep.md`. Not rehearsed. |
 
 ## What to submit (Devpost)
 
 | Item | Status | Notes |
 |---|---|---|
-| Project name, short description, team members | ❌ | "Hotline" is still a working name. |
-| Main track, chain award, every bounty | ❌ | Opt in to each bounty on Devpost. |
-| Written answers: what, problem, how it works, what's unique, what's next | ❌ | Draft in this repo first. |
-| Technologies and sponsor tools used | ❌ | List below under each sponsor. |
+| Project name, short description, team members | 🟡 | Drafted in `demos/devpost.md`, with three name alternatives. |
+| Main track, chain award, every bounty | 🟡 | Drafted in `demos/devpost.md`: Agentic Payments & AI, Arc, ElevenLabs, QuickNode. Opt in on Devpost. |
+| Written answers: what, problem, how it works, what's unique, what's next | 🟡 | Drafted in `demos/devpost.md`. |
+| Technologies and sponsor tools used | 🟡 | Drafted in `demos/devpost.md`. |
 | Public GitHub repo with source and setup instructions | ✅ | https://github.com/sunrobert/hotline · README "Run it" section. |
 | **Working demo or deployed app** | 🟡 | Works from the laptop through a tunnel. Judges can't call the Telnyx trial number (it only reaches verified numbers). Plan: the video plus the live demo at finals; the dashboard URL works while the laptop is up. |
-| **2–3 minute demo video**, on YouTube or Drive, viewable by judges | ❌ | Must show ElevenLabs working **with audio** (bounty rule). |
+| **2–3 minute demo video**, on YouTube or Drive, viewable by judges | 🟡 | Scripted in `demos/video-script.md`; not recorded. Must show ElevenLabs working **with audio** (bounty rule). |
 | README with technical docs and architecture | ✅ | Decision loop, safety limits, architecture, Arc usage, tool API. |
 
 ## Agentic Payments & AI (main track)
