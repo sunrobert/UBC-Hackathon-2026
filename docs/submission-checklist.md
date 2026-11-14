@@ -11,7 +11,7 @@ Legend: ✅ done · 🟡 partly done · ❌ not started · ➖ not entering
 | Main track: **Agentic Payments & AI** | yes | $2,000 |
 | Chain award: **Best use of Arc** | yes | $1,000 |
 | Bounty: **ElevenLabs** | yes | 3 months of Scale per member |
-| Bounty: **QuickNode Streams** | decide | $500 |
+| Bounty: **QuickNode Streams** | yes | $500 |
 | Bounty: Gemini Prediction Markets | ➖ | |
 | Bounty: Grok Bot | ➖ | |
 | Official Winner (automatic) | yes | up to $2,500 |
@@ -72,10 +72,10 @@ Legend: ✅ done · 🟡 partly done · ❌ not started · ➖ not entering
 
 | Requirement | Status | Notes |
 |---|---|---|
-| Streams as a core data source | ❌ | Today a free RPC poller detects deposits. A Stream would become the primary trigger, with the poller as backup; dedup already handles both. |
-| At least one Stream with a filter and a destination | ❌ | Filter: Arc testnet logs from the USDC system emitter to the agent wallet. Destination: webhook to the backend. |
-| README explains the Stream config and why | ❌ | |
-| Account | ❌ | Free trial reportedly needs no card. The guide's coupon (COLLEGEQN) is for the paid Build plan and its page says to enter it "before adding payment details," so likely a card: avoid under the no-spend rule. |
+| Streams as a core data source | ✅ | The Stream triggers the outbound approval call. Verified live with the poller off: delivered 0.8 s after the block. |
+| At least one Stream with a filter and a destination | ✅ | Arc testnet `logs`, filter keeps USDC system-emitter Transfers to the agent, webhook destination with HMAC verification. |
+| README explains the Stream config and why | ✅ | README "QuickNode Streams: what makes the phone ring". |
+| Account | 🟡 | Account shows 80M credits (Build plan allowance). **Check whether a card was added; if so, cancel before the month renews.** Stream is switched on only when needed. |
 
 ## Participation perks (complete submission)
 

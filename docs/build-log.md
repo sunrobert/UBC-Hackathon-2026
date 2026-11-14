@@ -142,3 +142,16 @@ Robert asked for confirmation sounds and a Hotline Bling intro. The song itself 
 
 ElevenLabs phone agents can only play built-in preset sounds, so custom sounds play on the dashboard, which is on the projector during the demo. The decision of which sound to play is a pure function over two ledger refreshes, served to the page and unit-tested (224 tests). Verified in the browser: module loads, files decode, toggle persists, no console errors. Not verified while signed in, because reading the dashboard token was blocked for the session; Robert should check it once.
 
+### QuickNode Stream (Nov 13, evening)
+
+Built test-first (251 tests): a filter that runs on QuickNode and turns Arc logs into deposits, a webhook that verifies QuickNode's HMAC signature, and `npm run stream -- check/on/off/status/retarget`. The tunnel script repoints a running Stream automatically.
+
+**Verified live:**
+- `check` ran our filter on QuickNode's servers against the reset top-up block (72214961) and returned exactly that 13.06 USDC deposit. Network name `arc-testnet` confirmed.
+- With the RPC poller **off** and the agent paused, a real 1 USDC deposit (tx `0xbefbf715…a458`, block 72263454) arrived from the Stream **about 0.8 s after its block**. Ledger records `via: stream`; the paused agent logged it without calling.
+- Stream switched off afterwards; server back to Stream hook plus poller.
+
+**Cost:** Streams bill per block; Arc testnet makes about 105,000 blocks a day. The account shows an 80M-credit allowance, so an always-on Stream is affordable for the hackathon, but it stays on-demand. Usage read 0 right after the test, probably reporting lag.
+
+**Gotcha:** the free quick-tunnel address stopped resolving after several hours even though cloudflared was still running. Restarting the tunnel fixed it. A permanent address (free Cloudflare account, named tunnel) is worth setting up before demo day.
+
