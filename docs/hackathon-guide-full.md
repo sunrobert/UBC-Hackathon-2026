@@ -1,5 +1,5 @@
+> Source: official "Hackathon Guide UBC 26" Google Doc, re-captured 2026-11-13. Changes since the Nov 5 copy: start time moved to Thu Nov 12 6 PM CST, ElevenLabs Discord redemption steps, and a sponsor perks section (Cursor/Grok, ElevenLabs, QuickNode credits).
 
-> Source: official "Hackathon Guide UBC 26" Google Doc, captured 2026-11-05. Re-check the doc before submitting; the workshop schedule was still blank when captured.
 
 ## Welcome to the University Blockchain Conference hackathon! 
 
@@ -51,7 +51,9 @@ Bounties (optional, enter as many as you qualify for)
 
 - Kickoff Call: Thursday, November 12 @ 6:00 PM CST
 
-- Hackathon Start: Friday, November 13 at 12:00 PM CST
+- Hackathon Start: Thursday, November 12 at 6:00 PM CST
+
+- Note that Devpost starts on Friday 12:00 PM CST, ignore this. In-person hackathons on Devpost have a max hack length of 1 week.
 
 - Submission Deadline: Friday, November 20 at 12:00 PM CST
 
@@ -505,6 +507,20 @@ For ElevenLabs Builders:
 
 - Libraries & SDKs
 
+Participants can claim their free ElevenLabs access through Discord system:
+
+1. Join the Discord server: https://discord.com/invite/VnBvbbcdEC
+
+2. Gain access to the #│coupon-codes channel
+
+3. Click “Start Redemption”
+
+4. Select the event and fill out the form using the email used for registration
+
+5. The bot sends the unique coupon code
+
+Video Tutorial: https://youtu.be/S143_JtCtV8
+
 For QuickNode Streams Builders:
 
 - Streams Quickstart
@@ -546,3 +562,17 @@ That’s everything the UBC team has for y’all!Pick your track, form your tea
 Questions? Ask in the Telegram, join office hours, or speak to an organizer.
 
 - Nathan, on behalf of the UBC 26 Hackathon Organizer Committee
+
+## Redeeming Sponsor Perks & Credits
+
+### Cursor (Grok Pro Perk)
+
+- Log in to Grok first, then visit the Cursor / Grok referral link to claim your first month for $0 (250 redemptions available).
+
+### ElevenLabs
+
+- Join the Discord server, head to the #│coupon-codes channel, click "Start Redemption", and fill out the form. You can also watch the video tutorial for guidance.
+
+### QuickNode
+
+- Visit the QuickNode Credits Guide to claim your credits.
