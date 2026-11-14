@@ -75,7 +75,7 @@ Legend: ✅ done · 🟡 partly done · ❌ not started · ➖ not entering
 | Streams as a core data source | ✅ | The Stream triggers the outbound approval call. Verified live with the poller off: delivered 0.8 s after the block. |
 | At least one Stream with a filter and a destination | ✅ | Arc testnet `logs`, filter keeps USDC system-emitter Transfers to the agent, webhook destination with HMAC verification. |
 | README explains the Stream config and why | ✅ | README "QuickNode Streams: what makes the phone ring". |
-| Account | 🟡 | Account shows 80M credits (Build plan allowance). **Check whether a card was added; if so, cancel before the month renews.** Stream is switched on only when needed. |
+| Account | ✅ | Build plan via the COLLEGEQN coupon, **card on file**. First month free from Nov 14; **cancel after finals and before it renews around Dec 14**, or it charges $49. |
 
 ## Participation perks (complete submission)
 
