@@ -155,3 +155,12 @@ Built test-first (251 tests): a filter that runs on QuickNode and turns Arc logs
 
 **Gotcha:** the free quick-tunnel address stopped resolving after several hours even though cloudflared was still running. Restarting the tunnel fixed it. A permanent address (free Cloudflare account, named tunnel) is worth setting up before demo day.
 
+## Sat Nov 14 (day 2): unattended work while Robert was out
+
+- **Self-healing tunnel.** `npm run tunnel` now checks its public address every minute and starts a fresh tunnel after three failures in a row, or right away if cloudflared exits; each new address repoints the agent and any running Stream. If the local server is the thing that is down, it reports that instead of churning addresses. Decision logic unit-tested. **Verified live:** killed cloudflared; a new tunnel came up, the agent was repointed, and the new address answered publicly.
+- **Cut-offs.** Filler sounds (um, uh, 嗯, 呃 and similar) no longer interrupt the agent mid-sentence. Every word that can answer a question (yes, no, ok, 好, 对, 是, 可以, 确认, 不, 等一下...) is excluded, and a test enforces it. Pushed to the live agent and read back. Not yet heard on a real call.
+- **README:** full "ElevenLabs products used" table (bounty requirement).
+- **Submission drafts** in `demos/`: Devpost answers, 2–3 min video script, 5-minute pitch with fallback, 20 Q&A answers. Written by a background helper; spot-checked here.
+- **Circle plan** in `docs/circle-plan.md`: developer-controlled wallets on `ARC-TESTNET` (Circle's own quickstart uses that chain). Needs Robert's free Circle account and a testnet API key.
+- Tests: 258 passing.
+

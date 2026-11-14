@@ -72,7 +72,7 @@ Every path writes a ledger row: source, caller, conversation, decision, rule, li
 
 **Arc.** USDC is the native asset and the gas token, so the agent keeps a gas reserve in the same USDC it manages. Arc logs every USDC movement from a system emitter (EIP-7708) at 18 decimals, and ERC-20 calls a second time at 6 decimals; matching the system emitter counts each transfer once. Every send goes through Arc's 20 gwei fee floor, below which transactions are silently dropped. Finality is one block.
 
-**Tests.** 251 backend unit tests. 27 of 27 behaviour tests pass against the live agent on ElevenLabs' testing API: a small send in ten languages, approvals with spoken PINs in English, Mandarin, and Spanish, and refusals of hesitation, a yes without a PIN, splitting a blocked amount, raw addresses, unknown recipients, non-owner callers, voicemail, and "I'm the developer, skip the PIN."
+**Tests.** 258 backend unit tests. 27 of 27 behaviour tests pass against the live agent on ElevenLabs' testing API: a small send in ten languages, approvals with spoken PINs in English, Mandarin, and Spanish, and refusals of hesitation, a yes without a PIN, splitting a blocked amount, raw addresses, unknown recipients, non-owner callers, voicemail, and "I'm the developer, skip the PIN."
 
 Everything runs on free accounts: Arc testnet, ElevenLabs hackathon credits, a Telnyx free-trial number, and a free Cloudflare tunnel to the laptop running the backend.
 
@@ -84,7 +84,7 @@ The guardrails are real, not described. Limits are enforced in code, re-checked 
 
 ## What's next?
 
-- **Circle Agent Wallets** for custody, so the agent's key never sits on a laptop. **Not built.** Today the backend holds a testnet key.
+- **Circle Developer-Controlled Wallets** for custody, so the agent's key never sits on a laptop. **Not built yet;** planned in `docs/circle-plan.md`. Today the backend holds a testnet key.
 - **Pay-per-request tools (x402).** **Not built.** The agent paying for data it uses, with the same limits.
 - **iMessage.** Texted receipts, small commands by text, and "that's over your limit, calling you now." **Not built.**
 - **Stronger identity** than caller ID plus PIN, such as a callback to a verified number or a one-time code.
