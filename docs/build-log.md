@@ -178,3 +178,11 @@ The track's first objective, "agents paying per request (x402)", was the biggest
 - **Agent:** `get_price` pushed to ElevenLabs; agent tests 29/29 (two new: a price question in English and in Mandarin calls `get_price` with ETH). Cost 2,981 credits; about 115k left.
 - **Also:** `npm run x402 -- setup | buy`, a preflight check for the seller's gas, and the dashboard names x402 rows. Docs updated: code README, checklist, Devpost draft, Q&A (two new answers on x402), pitch, and video script (a 10-second price-lookup beat).
 - **Spent (testnet only):** 0.5 USDC from sender to the seller for gas; five 0.01 lookups (three from the agent, two from the sender in attack tests).
+
+### x402 hardening (Nov 15)
+
+A review of the x402 code found two real gaps and one missing limit. Fixed test-first; 319 tests.
+
+- **Pending payments were recorded as failed.** If a settlement was broadcast but had no receipt within 30 s, `get_price` marked the row failed and freed the commitment, though the 0.01 could still move. It is now recorded as submitted with its transaction and followed to its receipt; the agent says the payment is still confirming.
+- **Two settlements at once collided.** The seller's key had no nonce manager, so two parallel lookups got the same nonce and one was refused. A test against a fake Arc RPC reproduced it; viem's `nonceManager` fixed it. Verified live: ETH and BTC bought in parallel, both settled in 1.7 s (`0x04fdec5d…`, `0x2f303030…`).
+- **A per-lookup budget.** `get_price` refuses any price over 0.05 USDC before the engine or the key see it, so an allowlisted seller cannot raise its price toward the 5 USDC auto-approve limit.

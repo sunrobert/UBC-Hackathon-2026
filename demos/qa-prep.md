@@ -54,7 +54,7 @@ Circle Agent Wallets, the iMessage channel, and stronger identity than caller ID
 The payment is real and standard; the seller is ours. The agent follows the x402 v2 spec: it gets a 402 with the terms, signs an EIP-3009 authorization for exactly one cent, and sends it in the `PAYMENT-SIGNATURE` header. The seller verifies it and settles it on Arc with `transferWithAuthorization`; the tx is on the explorer. No public x402 facilitator supports Arc testnet yet, so our seller settles its own payments. The buyer code would pay any x402 seller that offers exact USDC on Arc, and it only pays sellers on the allowlist.
 
 **14c. Can x402 be abused to drain the wallet?**
-Every payment goes through the same policy as a spoken send: the seller must be on the allowlist by address, it counts toward the daily cap, and pause stops it. The signature moves only the exact price, only to that seller, and expires in a minute. We tried replaying a settled payment, changing the amount after signing, and sending an expired one; the seller refused all three, and the USDC contract refuses a reused authorization even if the seller forgets.
+Every payment goes through the same policy as a spoken send: the seller must be on the allowlist by address, it counts toward the daily cap, and pause stops it. On top of that, a price lookup has its own budget of 0.05 USDC: an allowlisted seller that raised its price to a dollar would be refused before anything is signed. The signature moves only the exact price, only to that seller, and expires in a minute. We tried replaying a settled payment, changing the amount after signing, and sending an expired one; the seller refused all three, and the USDC contract refuses a reused authorization even if the seller forgets.
 
 ## Sponsor judges
 
