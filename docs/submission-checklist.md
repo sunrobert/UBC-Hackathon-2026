@@ -1,6 +1,6 @@
 # Submission checklist
 
-Every requirement in the official guide that applies to our entries, with where we stand. Re-checked against the guide on **Nov 13**. Deadline: **Fri Nov 20, 12:00 PM CST** on Devpost.
+Every requirement in the official guide that applies to our entries, with where we stand. Re-checked against the guide on **Nov 19**; the only rule change since Nov 13 is the pitch length (4 minutes, was 5). Deadline: **Fri Nov 20, 12:00 PM CST** on Devpost.
 
 Legend: ✅ done · 🟡 partly done · ❌ not started · ➖ not entering
 
@@ -23,7 +23,7 @@ Legend: ✅ done · 🟡 partly done · ❌ not started · ➖ not entering
 | Built during the hackathon (from Thu Nov 12, 6 PM CST) | ✅ | Build repo `sunrobert/hotline` starts Nov 13. HQ repo holds only planning before that. |
 | Exactly one main track; at most one chain award | ✅ | Agentic Payments & AI; Arc. |
 | **Present in person at the closing ceremony, Sat Nov 21, UT Austin** | ❌ | Required to win anything, including bounties. Robert must be there. |
-| Finalists: 5 min pitch + Q&A (deck says 2 or 5 min of Q&A) | 🟡 | Pitch in `demos/pitch.md`, Q&A answers in `demos/qa-prep.md`. Not rehearsed. |
+| Finalists: **4 min pitch + 2 min Q&A** (the guide changed from 5 min on Nov 19) | 🟡 | Pitch in `demos/pitch.md`, cut to 4 minutes with a cut order if it runs long. Q&A answers in `demos/qa-prep.md`. Not rehearsed. |
 
 ## What to submit (Devpost)
 

@@ -186,3 +186,7 @@ A review of the x402 code found two real gaps and one missing limit. Fixed test-
 - **Pending payments were recorded as failed.** If a settlement was broadcast but had no receipt within 30 s, `get_price` marked the row failed and freed the commitment, though the 0.01 could still move. It is now recorded as submitted with its transaction and followed to its receipt; the agent says the payment is still confirming.
 - **Two settlements at once collided.** The seller's key had no nonce manager, so two parallel lookups got the same nonce and one was refused. A test against a fake Arc RPC reproduced it; viem's `nonceManager` fixed it. Verified live: ETH and BTC bought in parallel, both settled in 1.7 s (`0x04fdec5d…`, `0x2f303030…`).
 - **A per-lookup budget.** `get_price` refuses any price over 0.05 USDC before the engine or the key see it, so an allowlisted seller cannot raise its price toward the 5 USDC auto-approve limit.
+
+## Thu Nov 19: guide re-check
+
+Re-read the official guide and the Devpost page. One rule changed since Nov 13: finalists get 4 minutes to present, not 5 (Q&A stays 2 minutes). `demos/pitch.md` is cut to 4 minutes: the two calls are unchanged and match the video, the talking around them is shorter, and there is a cut order if it runs long. Chain award stays Arc: the project is built on Arc, the deadline is the next day, and the Solana award is only $500 more.

@@ -1,4 +1,4 @@
-> Source: official "Hackathon Guide UBC 26" Google Doc, re-captured 2026-11-13. Changes since the Nov 5 copy: start time moved to Thu Nov 12 6 PM CST, ElevenLabs Discord redemption steps, and a sponsor perks section (Cursor/Grok, ElevenLabs, QuickNode credits).
+> Source: official "Hackathon Guide UBC 26" Google Doc, re-captured 2026-11-13 and re-checked 2026-11-19 (finalist pitch cut from 5 minutes to 4; two perk notes added). Changes since the Nov 5 copy: start time moved to Thu Nov 12 6 PM CST, ElevenLabs Discord redemption steps, and a sponsor perks section (Cursor/Grok, ElevenLabs, QuickNode credits).
 
 
 ## Welcome to the University Blockchain Conference hackathon! 
@@ -69,7 +69,7 @@ Bounties (optional, enter as many as you qualify for)
 
 - Finalists will be notified by Friday, Nov 20 at 11:59 PM CST
 
-- Each finalist team will have 5 minutes to present and 2 minutes for Q&A
+- Each finalist team will have 4 minutes to present and 2 minutes for Q&A
 
 - The judging panel will deliberate and determine winners immediately following all finalist pitches 
 
@@ -433,7 +433,7 @@ What to Submit
 
 - Bounty Judging: Bounty winners are selected by each sponsor and a UBC team representative based on project submissions
 
-- Live Demos: Finalists present to judges on stage (5 min + 2 min Q&A)
+- Live Demos: Finalists present to judges on stage (4 min + 2 min Q&A)
 
 - Deliberation: Judges finalize rankings and award winners. Within each main track, a UBC team representative chooses the Track Winner, a Solana representative chooses Best use of Solana, and an Arc representative chooses Best use of Arc. The UBC team chooses 1st, 2nd, and 3rd place for Official UBC 2026 Hackathon Winner
 
@@ -568,10 +568,12 @@ Questions? Ask in the Telegram, join office hours, or speak to an organizer.
 ### Cursor (Grok Pro Perk)
 
 - Log in to Grok first, then visit the Cursor / Grok referral link to claim your first month for $0 (250 redemptions available).
+- Must be with an account with no prior subscription
 
 ### ElevenLabs
 
 - Join the Discord server, head to the #│coupon-codes channel, click "Start Redemption", and fill out the form. You can also watch the video tutorial for guidance.
+- Coupon codes have been loaded and are ready under the "University Blockchain Conference (UBC Hackathon)" event name!
 
 ### QuickNode
 

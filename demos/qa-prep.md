@@ -2,6 +2,8 @@
 
 Short, honest answers. If a question exposes a gap, name it and say what fixes it. Judges trust "not yet, here's how" more than a dodge.
 
+On stage, Q&A is **2 minutes**: two or three questions. Give the first sentence of each answer below, one supporting fact, and stop at about 20 seconds.
+
 ## Security and trust
 
 **1. Caller ID can be spoofed. What stops someone pretending to be me?**
