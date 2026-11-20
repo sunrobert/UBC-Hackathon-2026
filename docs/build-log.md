@@ -190,3 +190,11 @@ A review of the x402 code found two real gaps and one missing limit. Fixed test-
 ## Thu Nov 19: guide re-check
 
 Re-read the official guide and the Devpost page. One rule changed since Nov 13: finalists get 4 minutes to present, not 5 (Q&A stays 2 minutes). `demos/pitch.md` is cut to 4 minutes: the two calls are unchanged and match the video, the talking around them is shorter, and there is a cut order if it runs long. Chain award stays Arc: the project is built on Arc, the deadline is the next day, and the Solana award is only $500 more.
+
+## Fri Nov 20: submission day
+
+- The ElevenLabs key in `.env.local` had stopped working (401); Robert replaced it.
+- Cloudflare quick tunnels returned 530 on the venue network, even over HTTP/2; switching the laptop to a phone hotspot fixed it. `scripts/tunnel.ts` now passes `--protocol http2`.
+- Devpost answers pasted from `demos/devpost.md`.
+- Demo video recorded on Zoom at noon: a live call with an 8 USDC send approved by PIN, a 60 USDC send blocked by the per-transaction cap, an x402 price lookup (0.01 USDC), and a 1 USDC send in Mandarin, all landed on Arc. Trimmed from 3:10 to 2:59 and uploaded to Drive.
+- Afterwards: PIN rotated (it was spoken on camera), QuickNode Stream turned off.

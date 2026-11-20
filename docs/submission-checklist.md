@@ -35,7 +35,7 @@ Legend: ✅ done · 🟡 partly done · ❌ not started · ➖ not entering
 | Technologies and sponsor tools used | 🟡 | Drafted in `demos/devpost.md`. |
 | Public GitHub repo with source and setup instructions | ✅ | https://github.com/sunrobert/hotline · README "Run it" section. |
 | **Working demo or deployed app** | 🟡 | Works from the laptop through a tunnel. Judges can't call the Telnyx trial number (it only reaches verified numbers). Plan: the video plus the live demo at finals; the dashboard URL works while the laptop is up. |
-| **2–3 minute demo video**, on YouTube or Drive, viewable by judges | 🟡 | Scripted in `demos/video-script.md`; not recorded. Must show ElevenLabs working **with audio** (bounty rule). |
+| **2–3 minute demo video**, on YouTube or Drive, viewable by judges | ✅ | Recorded Nov 20 (2:59, Zoom, trimmed). Shows a live call with audio: 8 USDC approved with PIN, 60 blocked by the cap, an x402 price lookup, a Mandarin send, then the dashboard ledger. Uploaded to Drive. Does not show the QuickNode deposit or the outbound call; the live pitch covers those. |
 | README with technical docs and architecture | ✅ | Decision loop, safety limits, architecture, Arc usage, tool API. |
 
 ## Agentic Payments & AI (main track)
@@ -64,7 +64,7 @@ Legend: ✅ done · 🟡 partly done · ❌ not started · ➖ not entering
 | Requirement | Status | Evidence |
 |---|---|---|
 | ElevenLabs API or SDK as a core feature | ✅ | Voice is the whole interface. |
-| **Demo video shows the integration working, with audio** | ❌ | |
+| **Demo video shows the integration working, with audio** | ✅ | Live phone call, English and Mandarin. |
 | README says which ElevenLabs products are used and how | 🟡 | Covered across the README; needs one explicit list: Agents, webhook tools, SIP trunk and outbound calls, call-start webhook, language detection, voicemail detection, agent testing, two voices (Katie, Amy on v4 turbo), sound effects, browser SDK. |
 | Also submitted to a main track | ✅ | |
 
