@@ -198,3 +198,5 @@ Re-read the official guide and the Devpost page. One rule changed since Nov 13: 
 - Devpost answers pasted from `demos/devpost.md`.
 - Demo video recorded on Zoom at noon: a live call with an 8 USDC send approved by PIN, a 60 USDC send blocked by the per-transaction cap, an x402 price lookup (0.01 USDC), and a 1 USDC send in Mandarin, all landed on Arc. Trimmed from 3:10 to 2:59 and uploaded to Drive.
 - Afterwards: PIN rotated (it was spoken on camera), QuickNode Stream turned off.
+- Second clip for the outbound call: a 20 USDC deposit reported by the QuickNode Stream (backup poller off for the take), Hotline phoned the owner, and the 15 USDC sweep settled after a spoken yes and PIN (deposit `0xd180931c…`, sweep `0xa58b13a4…`). A first attempt had one-way audio on the phone; the agent's automatic second call worked. PIN rotated again afterwards; Stream off.
+
