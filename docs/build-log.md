@@ -200,3 +200,12 @@ Re-read the official guide and the Devpost page. One rule changed since Nov 13: 
 - Afterwards: PIN rotated (it was spoken on camera), QuickNode Stream turned off.
 - Second clip for the outbound call: a 20 USDC deposit reported by the QuickNode Stream (backup poller off for the take), Hotline phoned the owner, and the 15 USDC sweep settled after a spoken yes and PIN (deposit `0xd180931c…`, sweep `0xa58b13a4…`). A first attempt had one-way audio on the phone; the agent's automatic second call worked. PIN rotated again afterwards; Stream off.
 
+## Lessons for next time
+
+- **Record the video early.** It was recorded at the deadline. Every prize depended on it, and two last-minute failures (an expired ElevenLabs key and a blocked tunnel) nearly cost it.
+- **Run preflight the day before the deadline, not the hour of.** It caught both failures; it just ran too late.
+- **Bring a hotspot.** Venue and dorm Wi-Fi can block Cloudflare quick tunnels (HTTP 530). The tunnel now uses HTTP/2, but the hotspot is what fixed it.
+- **Expect one-way audio on outbound calls.** The first approval call connected but the owner heard nothing; the automatic retry 90 s later worked. Keep the retry.
+- **Script the shots per judge.** Each sponsor judges mostly from the video, so each needs one unmistakable moment: the call audio, the "via QuickNode Stream" label, the explorer page. The first take missed the QuickNode and outbound-call moments; a second clip covered them.
+- **Turn the backup off to prove the primary.** With the RPC poller on, it reported the deposit before the Stream did. Turning the poller off for the take made the Stream visible.
+

@@ -1,6 +1,6 @@
 # Submission checklist
 
-Every requirement in the official guide that applies to our entries, with where we stand. Re-checked against the guide on **Nov 19**; the only rule change since Nov 13 is the pitch length (4 minutes, was 5). Deadline: **Fri Nov 20, 12:00 PM CST** on Devpost.
+Every requirement in the official guide that applies to our entries, with where we stand. **Submitted Nov 20.** Field-by-field text in `demos/devpost-submitted.md`. Re-checked against the guide on **Nov 19**; the only rule change since Nov 13 is the pitch length (4 minutes, was 5). Deadline: **Fri Nov 20, 12:00 PM CST** on Devpost.
 
 Legend: ✅ done · 🟡 partly done · ❌ not started · ➖ not entering
 
